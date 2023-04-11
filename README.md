@@ -46,6 +46,7 @@ A Php utility class for working with old MVC projects.
 ```
 
 > Result:
+
 ![Image demonstrating output](https://raw.githubusercontent.com/wolke412/ViewDependencies/main/output-example.png)
 
 
