@@ -1,5 +1,5 @@
 # ViewDependencies
-A Php utility class for working with MVC when projects.
+A Php utility class for working with old MVC projects.
 
 ## Basic usage:
 
