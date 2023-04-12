@@ -3,7 +3,7 @@ A Php utility class for working with old MVC projects.
 
 # Why: 
 Often old frameworks have one big chunk of styles or scripts and just loads them up every time.
-Now we load only what we'll be usefull.
+Now we load only what we'll be used.
 
 
 ## Basic usage:
