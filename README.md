@@ -1,7 +1,7 @@
 # ViewDependencies
 A Php utility class for working with old MVC projects.
 
-# Why: 
+## Why: 
 Often old frameworks have one big chunk of styles or scripts and just loads them up every time.
 Now we load only what we'll be used.
 
@@ -12,14 +12,16 @@ Now we load only what we'll be used.
 
 ```php
 <?php
+  // Requires lib. 
   require_once(__DIR__."/../utils/ViewDependencies.php");
+  
   $import = new ViewDependencies();
   $import
-    ->add_stylesheet("exmaple-page.css")
+    ->add_stylesheet("example-page.css")
     ->add_script("example-page.js")
-    ->add_script("utils/exmple-utils.js")
+    ->add_script("utils/example-utils.js")
     
-    // imports with absolute path (useful fopr external libraries)
+    // imports with absolute path (useful for external libraries)
     ->add_script("https://any.io/example-of-external-library.min.js", [
         "IS_ABSOLUTE_PATH" => TRUE
     ])
@@ -27,9 +29,17 @@ Now we load only what we'll be used.
     // options array is useful for changing the behaviour of your template
     // via View file
     ->options([
-        "NO_PADDING" => TRUE
+    
+        // Make changes to Layout...
+        "NO_PADDING" => TRUE,
+        
+        // Changing tags for SEO reasons....
+        "PAGE_TITLE" => "This is the new Title",
+        
+        // You can add essentially anything here and handle it accordingly at your template.
     ])
-
+  
+    // Exports to context.
     ->export($this);
 ?>
 
