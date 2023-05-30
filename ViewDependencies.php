@@ -62,7 +62,7 @@
       if ( is_null($path) ) return;
       
       if ( !$options["IS_ABSOLUTE_PATH"] ) {
-        $path = $this->get_absolute_path( $path, $this::STYLESHEETS_FOLDER );
+        $path = $this->get_absolute_path( $path, $this::SCRIPTS_FOLDER );
       }
 
       $html = "<script src='$path' type='text/javascript'></script>";
